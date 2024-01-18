@@ -12,12 +12,12 @@
     <title>E-com Project</title>
     <style>.gradient-custom-2{
         background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-    }</style>
+    }.customs{padding:0px;}</style>
 </head>
-<div class="container">
+<div class="container-fluid customs">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        <img src="path/to/your/logo.png" width="30" height="30" alt="Logo">
+        <img src="{{ asset('shop-logo-good-600w-1290022027-transformed-removebg-preview.png')}}" width="80" height="70" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

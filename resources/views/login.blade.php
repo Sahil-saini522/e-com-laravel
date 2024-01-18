@@ -16,22 +16,30 @@
                     <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                   </div>
   
-                  <form>
+                  <form method="post" action="/login">
+                    @csrf
                     <p>Please login to your account</p>
   
                     <div class="form-outline mb-4">
-                      <input type="email" id="form2Example11" class="form-control"
+                      <input type="email" name="email" id="form2Example11" class="form-control"
                         placeholder="Phone number or email address" />
                       <label class="form-label" for="form2Example11">Username</label>
+                      @error('email')
+                      <span class="alert text-danger" >{{$message}}</span>
+                      @enderror
+                     
                     </div>
   
                     <div class="form-outline mb-4">
-                      <input type="password" id="form2Example22" class="form-control" />
+                      <input type="password" id="form2Example22" name="password" class="form-control" />
                       <label class="form-label" for="form2Example22">Password</label>
+                      @error('password')
+                      <span class="alert text-danger">{{$message}}</span>
+                      @enderror
                     </div>
   
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
                         in</button>
                       <a class="text-muted" href="#!">Forgot password?</a>
                     </div>
